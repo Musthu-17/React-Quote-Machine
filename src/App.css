@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(215, 215, 215);
+}
+
+.quote-box {
+  min-height: 25vh; 
+  max-width: 66vw;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  flex-direction: column;
+  position: relative;
+}
+
+.quote-box::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 5px solid white; 
+  border-left: 5px solid white; 
+  display: inline-block;
+  animation: expandborder 2s ease-in-out forwards
+}
+
+.quote-box::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-right: 5px solid white; 
+  border-top: 5px solid white; 
+  display: inline-block;
+  animation: expandborder 2s ease-in-out forwards;
+}
+
+@keyframes expandborder{
+  to{
+    width: 50%;
+    height: 50%
+  }
+}
+
+
+#text{
+  font-size: 30px;
+  cursor: default;
+}
+
+#text:hover{
+  color: rgb(255, 140, 0);
+  transition: 0.25s ease-out
+}
+
+#author{
+  text-align: right;
+  font-size: 15px;
+  cursor: default;
+}
+
+#author:hover{
+  color: rgb(255, 140, 0);
+  transition: 0.25s ease-out
+}
+
+.actions{
+  display: flex;
+  padding: 10px 0;
+}
+
+#new-quote{
+  width: 120px;
+  margin-left: auto;
+  border-radius: 5px;
+  border:none;
+  cursor: pointer;
+}
+
+#new-quote:hover{
+  background-color: rgb(255, 140, 0);
+  transition: 0.5s ease-in;
+}
+
+#tweet-quote{
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#tweet-quote:hover{
+  background-color: rgb(255, 140, 0);
+  transition: 0.5s ease-in;
+}
+
+.tweet{
+  position: relative;
+  top: 3px;
+}
+
+.background{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.5s ease-in;
+  object-fit: cover;
+}
+
+.loadIcon{
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate{
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
