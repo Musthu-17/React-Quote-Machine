@@ -1,7 +1,6 @@
 import './App.css';
 import load from "./loading.png";
 import React, { useState,useEffect } from "react";
-import '@fortawesome/fontawesome-free/css/all.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
