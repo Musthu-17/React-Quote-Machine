@@ -56,7 +56,6 @@ function App() {
   }
   
   return (
-    <meta name="google-site-verification" content="c32x_Z2sC4TJl8jUifBD7dKetoHOduI8lAux-tr0sOo" />
     <div className="App">
       <header className="App-header"> 
 
